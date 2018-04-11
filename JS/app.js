@@ -7,8 +7,8 @@ var product=1;
 var sum=0;
 var newArr=[];
 
-
-while(card == '' || card.replace(/[^a-z]/g, ' ' ) == card || card.length !== 16){
+card.replace(/[^a-zA-Z0-9]/g,'_')
+while(card == '' || card.replace(/[^a-z]/g, ' ' ) == card || card.length !== 16 || card.replace(/[^a-zA-Z0-9]/g,'_') == card){
   alert('Tu tarjeta debe tener 16 digitos y solo se admiten numeros'); //Validamos que el usuario no ingrese campos vacios ni letras.
   text = prompt ("Ingresa los numeros a evaluar");
 }
